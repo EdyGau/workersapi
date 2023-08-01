@@ -28,7 +28,6 @@ class FilterAndSortMiddleware
         $sorting = json_decode($request->query->get('sorting', '{}'), true);
 
         $limit = $request->query->getInt('limit', self::DEFAULT_LIMIT);
-
         $page = $request->query->getInt('page', self::DEFAULT_PAGE);
 
         $queryBuilder = $this->entityManager->createQueryBuilder();
