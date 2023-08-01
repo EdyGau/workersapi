@@ -56,12 +56,12 @@ class WorkerController extends AbstractController
     public function index(Request $request): JsonResponse
     {
         $queryBuilder = $request->attributes->get('query_builder');
-
         $results = $queryBuilder->getQuery()->getResult();
-
+    
         $data = $this->serializer->serialize($results, 'json', ['groups' => 'worker:list']);
-
-        return new JsonResponse($data, Response::HTTP_OK);
+        $decodedData = json_decode($data, true);
+    
+        return new JsonResponse($decodedData, Response::HTTP_OK);
     }
 
     /**
