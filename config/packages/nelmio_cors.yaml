@@ -1,0 +1,14 @@
+nelmio_cors:
+    defaults:
+        allow_origin: ['http://api.example.com', 'https://127.0.0.1:8000']
+        allow_methods: ['GET', 'POST', 'PUT', 'DELETE']
+        allow_headers: ['Content-Type', 'Authorization']
+        max_age: 3600
+    paths:
+        '^/api/doc':
+            allow_origin: ['*']
+            allow_headers: ['Content-Type']
+            allow_methods: ['GET']
+            max_age: 3600
+
+
