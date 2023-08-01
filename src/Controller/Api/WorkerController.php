@@ -59,7 +59,7 @@ class WorkerController extends AbstractController
 
         $results = $queryBuilder->getQuery()->getResult();
 
-        $data = $this->serializer->normalize($results, null, ['groups' => 'worker:list']);
+        $data = $this->serializer->serialize($results, 'json', ['groups' => 'worker:list']);
 
         return new JsonResponse($data, Response::HTTP_OK);
     }
