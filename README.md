@@ -1,6 +1,6 @@
 # WorkersApi
 
-WorkersApi provides a RESTful interface that allows you to manage employee data. You can use various HTTP queries like GET, POST, PUT, DELETE to read, track, update and delete module data.
+WorkersApi provides a RESTfull interface that allows you to manage employee data. You can use various HTTP queries like GET, POST, PUT, DELETE to read, track, update and delete module data.
 
 ## Installation
 
